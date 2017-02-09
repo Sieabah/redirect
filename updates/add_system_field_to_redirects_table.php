@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace ChrisS\Redirect\Updates;
 
 use Illuminate\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -9,11 +9,11 @@ use Schema;
 /**
  * Class AddSystemFieldToRedirectsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package ChrisS\Redirect\Updates
  */
 class AddSystemFieldToRedirectsTable extends Migration
 {
-    const TABLE = 'adrenth_redirect_redirects';
+    const TABLE = 'chriss_redirect_redirects';
 
     public function up()
     {

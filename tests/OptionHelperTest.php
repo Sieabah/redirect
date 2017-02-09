@@ -1,15 +1,15 @@
 <?php
 
-namespace Adrenth\Redirect\Tests;
+namespace ChrisS\Redirect\Tests;
 
-use Adrenth\Redirect\Classes\OptionHelper;
-use Adrenth\Redirect\Models\Redirect;
+use ChrisS\Redirect\Classes\OptionHelper;
+use ChrisS\Redirect\Models\Redirect;
 use PluginTestCase;
 
 /**
  * Class OptionHelperTest
  *
- * @package Adrenth\Redirect\Tests
+ * @package ChrisS\Redirect\Tests
  */
 class OptionHelperTest extends PluginTestCase
 {

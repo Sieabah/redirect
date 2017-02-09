@@ -1,4 +1,4 @@
-# Adrenth.Redirect
+# ChrisS.Redirect
 
 ## The #1 Redirect plugin for October CMS
 
@@ -157,7 +157,7 @@ If you like to contribute to this plugin feel free to create a Pull Request. But
 
 If you have any question about how to use this plugin, please don't hesitate to contact me. I'm happy to help you.
 
-You can also create an issue on the [GitHub](https://github.com/adrenth/redirect) page of this plugin.
+You can also create an issue on the [GitHub](https://github.com/chriss/redirect) page of this plugin.
 
 Kind regards,
 

@@ -4,5 +4,5 @@
 
 columns:
     name:
-        label: adrenth.redirect::lang.redirect.name
+        label: chriss.redirect::lang.redirect.name
         searchable: true

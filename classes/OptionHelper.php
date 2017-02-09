@@ -1,9 +1,9 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace ChrisS\Redirect\Classes;
 
-use Adrenth\Redirect\Models\Category;
-use Adrenth\Redirect\Models\Redirect;
+use ChrisS\Redirect\Models\Category;
+use ChrisS\Redirect\Models\Redirect;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use System\Classes\PluginManager;
@@ -11,7 +11,7 @@ use System\Classes\PluginManager;
 /**
  * Class OptionHelper
  *
- * @package Adrenth\Redirect\Classes
+ * @package ChrisS\Redirect\Classes
  */
 class OptionHelper
 {
@@ -21,9 +21,9 @@ class OptionHelper
     public static function getTargetTypeOptions()
     {
         return [
-            Redirect::TARGET_TYPE_PATH_URL => 'adrenth.redirect::lang.redirect.target_type_path_or_url',
-            Redirect::TARGET_TYPE_CMS_PAGE => 'adrenth.redirect::lang.redirect.target_type_cms_page',
-            Redirect::TARGET_TYPE_STATIC_PAGE => 'adrenth.redirect::lang.redirect.target_type_static_page',
+            Redirect::TARGET_TYPE_PATH_URL => 'chriss.redirect::lang.redirect.target_type_path_or_url',
+            Redirect::TARGET_TYPE_CMS_PAGE => 'chriss.redirect::lang.redirect.target_type_cms_page',
+            Redirect::TARGET_TYPE_STATIC_PAGE => 'chriss.redirect::lang.redirect.target_type_static_page',
         ];
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Controllers;
+namespace ChrisS\Redirect\Controllers;
 
 use Backend\Behaviors\FormController;
 use Backend\Behaviors\ListController;
@@ -12,7 +12,7 @@ use BackendMenu;
 /**
  * Class Categories
  *
- * @package Adrenth\Redirect\Controllers
+ * @package ChrisS\Redirect\Controllers
  * @mixin FormController
  * @mixin ListController
  */
@@ -39,6 +39,6 @@ class Categories extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Adrenth.Redirect', 'redirect', 'categories');
+        BackendMenu::setContext('ChrisS.Redirect', 'redirect', 'categories');
     }
 }

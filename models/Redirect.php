@@ -1,8 +1,8 @@
 <?php
 
-namespace Adrenth\Redirect\Models;
+namespace ChrisS\Redirect\Models;
 
-use Adrenth\Redirect\Classes\OptionHelper;
+use ChrisS\Redirect\Classes\OptionHelper;
 use Carbon\Carbon;
 use Eloquent;
 use Illuminate\Support\Fluent;
@@ -15,7 +15,7 @@ use October\Rain\Database\Traits\Validation;
 /**
  * Class Redirect
  *
- * @package Adrenth\Redirect\Models
+ * @package ChrisS\Redirect\Models
  * @mixin Eloquent
  */
 class Redirect extends Model
@@ -59,7 +59,7 @@ class Redirect extends Model
     /**
      * {@inheritdoc}
      */
-    public $table = 'adrenth_redirect_redirects';
+    public $table = 'chriss_redirect_redirects';
 
     /**
      * {@inheritdoc}
@@ -88,9 +88,9 @@ class Redirect extends Model
      * @var array
      */
     public $customMessages = [
-        'to_url.required_if' => 'adrenth.redirect::lang.redirect.to_url_required_if',
-        'cms_page.required_if' => 'adrenth.redirect::lang.redirect.cms_page_required_if',
-        'static_page.required_if' => 'adrenth.redirect::lang.redirect.static_page_required_if',
+        'to_url.required_if' => 'chriss.redirect::lang.redirect.to_url_required_if',
+        'cms_page.required_if' => 'chriss.redirect::lang.redirect.cms_page_required_if',
+        'static_page.required_if' => 'chriss.redirect::lang.redirect.static_page_required_if',
     ];
 
     /**
@@ -106,18 +106,18 @@ class Redirect extends Model
      * @var array
      */
     public $attributeNames = [
-        'to_url' => 'adrenth.redirect::lang.redirect.to_url',
-        'from_url' => 'adrenth.redirect::lang.redirect.from_url',
-        'match_type' => 'adrenth.redirect::lang.redirect.match_type',
-        'target_type' => 'adrenth.redirect::lang.redirect.target_type',
-        'cms_page' => 'adrenth.redirect::lang.redirect.target_type_cms_page',
-        'static_page' => 'adrenth.redirect::lang.redirect.target_type_static_page',
-        'status_code' => 'adrenth.redirect::lang.redirect.status_code',
-        'from_date' => 'adrenth.redirect::lang.scheduling.from_date',
-        'to_date' => 'adrenth.redirect::lang.scheduling.to_date',
-        'sort_order' => 'adrenth.redirect::lang.redirect.sort_order',
-        'requirements' => 'adrenth.redirect::lang.redirect.requirements',
-        'last_used_at' => 'adrenth.redirect::lang.redirect.last_used_at',
+        'to_url' => 'chriss.redirect::lang.redirect.to_url',
+        'from_url' => 'chriss.redirect::lang.redirect.from_url',
+        'match_type' => 'chriss.redirect::lang.redirect.match_type',
+        'target_type' => 'chriss.redirect::lang.redirect.target_type',
+        'cms_page' => 'chriss.redirect::lang.redirect.target_type_cms_page',
+        'static_page' => 'chriss.redirect::lang.redirect.target_type_static_page',
+        'status_code' => 'chriss.redirect::lang.redirect.status_code',
+        'from_date' => 'chriss.redirect::lang.scheduling.from_date',
+        'to_date' => 'chriss.redirect::lang.scheduling.to_date',
+        'sort_order' => 'chriss.redirect::lang.redirect.sort_order',
+        'requirements' => 'chriss.redirect::lang.redirect.requirements',
+        'last_used_at' => 'chriss.redirect::lang.redirect.last_used_at',
     ];
 
     /**
@@ -282,7 +282,7 @@ class Redirect extends Model
         $options = [];
 
         foreach (self::$types as $value) {
-            $options[$value] = trans("adrenth.redirect::lang.redirect.$value");
+            $options[$value] = trans("chriss.redirect::lang.redirect.$value");
         }
 
         return $options;
@@ -298,7 +298,7 @@ class Redirect extends Model
         $options = [];
 
         foreach (self::$targetTypes as $value) {
-            $options[$value] = trans("adrenth.redirect::lang.redirect.target_type_$value");
+            $options[$value] = trans("chriss.redirect::lang.redirect.target_type_$value");
         }
 
         return $options;
@@ -312,7 +312,7 @@ class Redirect extends Model
         $options = [];
 
         foreach (self::$statusCodes as $value => $message) {
-            $options[$value] = trans("adrenth.redirect::lang.redirect.$message");
+            $options[$value] = trans("chriss.redirect::lang.redirect.$message");
         }
 
         return $options;

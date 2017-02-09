@@ -1,13 +1,13 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace ChrisS\Redirect\Updates;
 
 use October\Rain\Database\Updates\Migration;
 
 /**
  * Class Publish
  *
- * @package Adrenth\Redirect\Updates
+ * @package ChrisS\Redirect\Updates
  */
 class Publish extends Migration
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Adrenth\Redirect;
+namespace ChrisS\Redirect;
 
-use Adrenth\Redirect\Classes\PageHandler;
-use Adrenth\Redirect\Classes\PublishManager;
-use Adrenth\Redirect\Classes\RedirectManager;
-use Adrenth\Redirect\Classes\StaticPageHandler;
-use Adrenth\Redirect\Models\Redirect;
+use ChrisS\Redirect\Classes\PageHandler;
+use ChrisS\Redirect\Classes\PublishManager;
+use ChrisS\Redirect\Classes\RedirectManager;
+use ChrisS\Redirect\Classes\StaticPageHandler;
+use ChrisS\Redirect\Models\Redirect;
 use App;
 use Backend;
 use Cms\Classes\Page;
@@ -17,7 +17,7 @@ use System\Classes\PluginBase;
 /**
  * Class Plugin
  *
- * @package Adrenth\Redirect
+ * @package ChrisS\Redirect
  */
 class Plugin extends PluginBase
 {
@@ -138,7 +138,7 @@ class Plugin extends PluginBase
             'redirect' => [
                 'label' => 'chriss.redirect::lang.navigation.menu_label',
                 'icon' => 'icon-link',
-                'url' => Backend::url('adrenth/redirect/statistics'),
+                'url' => Backend::url('chriss/redirect/statistics'),
                 'order' => 50,
                 'permissions' => [
                     'chriss.redirect.access_redirects',
@@ -147,7 +147,7 @@ class Plugin extends PluginBase
                     'statistics' => [
                         'icon' => 'icon-bar-chart',
                         'label' => 'chriss.redirect::lang.title.statistics',
-                        'url' => Backend::url('adrenth/redirect/statistics'),
+                        'url' => Backend::url('chriss/redirect/statistics'),
                         'permissions' => [
                             'chriss.redirect.access_redirects',
                         ],
@@ -155,14 +155,14 @@ class Plugin extends PluginBase
                     'redirects' => [
                         'icon' => 'icon-link',
                         'label' => 'chriss.redirect::lang.navigation.menu_label',
-                        'url' => Backend::url('adrenth/redirect/redirects'),
+                        'url' => Backend::url('chriss/redirect/redirects'),
                         'permissions' => [
                             'chriss.redirect.access_redirects',
                         ],
                     ],
                     'reorder' => [
                         'label' => 'chriss.redirect::lang.buttons.reorder_redirects',
-                        'url' => Backend::url('adrenth/redirect/redirects/reorder'),
+                        'url' => Backend::url('chriss/redirect/redirects/reorder'),
                         'icon' => 'icon-sort-amount-asc',
                         'permissions' => [
                             'chriss.redirect.access_redirects',
@@ -170,7 +170,7 @@ class Plugin extends PluginBase
                     ],
                     'logs' => [
                         'label' => 'chriss.redirect::lang.buttons.logs',
-                        'url' => Backend::url('adrenth/redirect/logs'),
+                        'url' => Backend::url('chriss/redirect/logs'),
                         'icon' => 'icon-file-text-o',
                         'permissions' => [
                             'chriss.redirect.access_redirects',
@@ -178,7 +178,7 @@ class Plugin extends PluginBase
                     ],
                     'categories' => [
                         'label' => 'chriss.redirect::lang.buttons.categories',
-                        'url' => Backend::url('adrenth/redirect/categories'),
+                        'url' => Backend::url('chriss/redirect/categories'),
                         'icon' => 'icon-tag',
                         'permissions' => [
                             'chriss.redirect.access_redirects',
@@ -186,7 +186,7 @@ class Plugin extends PluginBase
                     ],
                     'import' => [
                         'label' => 'chriss.redirect::lang.buttons.import',
-                        'url' => Backend::url('adrenth/redirect/redirects/import'),
+                        'url' => Backend::url('chriss/redirect/redirects/import'),
                         'icon' => 'icon-download',
                         'permissions' => [
                             'chriss.redirect.access_redirects',
@@ -194,7 +194,7 @@ class Plugin extends PluginBase
                     ],
                     'export' => [
                         'label' => 'chriss.redirect::lang.buttons.export',
-                        'url' => Backend::url('adrenth/redirect/redirects/export'),
+                        'url' => Backend::url('chriss/redirect/redirects/export'),
                         'icon' => 'icon-upload',
                         'permissions' => [
                             'chriss.redirect.access_redirects',

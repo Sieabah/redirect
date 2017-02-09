@@ -1,10 +1,10 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace ChrisS\Redirect\Classes;
 
-use Adrenth\Redirect\Models\Client;
-use Adrenth\Redirect\Models\Redirect;
-use Adrenth\Redirect\Models\RedirectLog;
+use ChrisS\Redirect\Models\Client;
+use ChrisS\Redirect\Models\Redirect;
+use ChrisS\Redirect\Models\RedirectLog;
 use Carbon\Carbon;
 use Cms\Classes\Controller;
 use Cms\Classes\Theme;
@@ -21,7 +21,7 @@ use Symfony\Component\Routing\RouteCollection;
 /**
  * Class RedirectManager
  *
- * @package Adrenth\Redirect\Classes
+ * @package ChrisS\Redirect\Classes
  */
 class RedirectManager
 {
@@ -169,7 +169,7 @@ class RedirectManager
                 $toUrl = $this->redirectToPathOrUrl($rule);
 
                 // Check if $toUrl is a relative path, if so, we need to add the base path to it.
-                // Refs: https://github.com/adrenth/redirect/issues/21
+                // Refs: https://github.com/chriss/redirect/issues/21
                 if (is_string($toUrl)
                     && $toUrl[0] !== '/'
                     && substr($toUrl, 0, 7) !== 'http://'

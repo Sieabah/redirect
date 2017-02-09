@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Updates;
+namespace ChrisS\Redirect\Updates;
 
 use DB;
 use Illuminate\Database\Schema\Blueprint;
@@ -10,11 +10,11 @@ use Schema;
 /**
  * Class ChangeTypeUrlColumnsRedirectsTable
  *
- * @package Adrenth\Redirect\Updates
+ * @package ChrisS\Redirect\Updates
  */
 class ChangeTypeUrlColumnsRedirectsTable extends Migration
 {
-    const TABLE = 'adrenth_redirect_redirects';
+    const TABLE = 'chriss_redirect_redirects';
 
     public function up()
     {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Adrenth\Redirect\Classes;
+namespace ChrisS\Redirect\Classes;
 
-use Adrenth\Redirect\Models\Redirect;
+use ChrisS\Redirect\Models\Redirect;
 use Cms\Classes\CmsCompoundObject;
 use Event;
 
 /**
  * Class PageHandler
  *
- * @package Adrenth\Redirect\Classes
+ * @package ChrisS\Redirect\Classes
  */
 class PageHandler
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Adrenth\Redirect\Controllers;
+namespace ChrisS\Redirect\Controllers;
 
-use Adrenth\Redirect\Models\Client;
+use ChrisS\Redirect\Models\Client;
 use BackendMenu;
 use Backend\Classes\Controller;
 
@@ -15,9 +15,9 @@ class Statistics extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Adrenth.Redirect', 'redirect', 'statistics');
+        BackendMenu::setContext('ChrisS.Redirect', 'redirect', 'statistics');
 
-        $this->pageTitle = trans('adrenth.redirect::lang.title.statistics');
+        $this->pageTitle = trans('chriss.redirect::lang.title.statistics');
     }
 
     public function index()
@@ -69,7 +69,7 @@ class Statistics extends Controller
         /** @noinspection PhpMethodParametersCountMismatchInspection */
         return (array) Client::selectRaw('COUNT(redirect_id) AS hits')
             ->addSelect('redirect_id', 'r.from_url')
-            ->join('adrenth_redirect_redirects AS r', 'r.id', '=', 'redirect_id')
+            ->join('chriss_redirect_redirects AS r', 'r.id', '=', 'redirect_id')
             ->whereMonth('timestamp', '=', date('m'))
             ->whereYear('timestamp', '=', date('Y'))
             ->groupBy('redirect_id')

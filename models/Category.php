@@ -1,6 +1,6 @@
 <?php
 
-namespace Adrenth\Redirect\Models;
+namespace ChrisS\Redirect\Models;
 
 use Eloquent;
 use October\Rain\Database\Model;
@@ -10,7 +10,7 @@ use October\Rain\Database\Model;
 /**
  * Class Category
  *
- * @package Adrenth\Redirect\Models
+ * @package ChrisS\Redirect\Models
  * @mixin Eloquent
  */
 class Category extends Model
@@ -18,7 +18,7 @@ class Category extends Model
     /**
      * {@inheritdoc}
      */
-    public $table = 'adrenth_redirect_categories';
+    public $table = 'chriss_redirect_categories';
 
     /**
      * {@inheritdoc}

@@ -4,32 +4,32 @@
 
 columns:
     system:
-        label: adrenth.redirect::lang.redirect.type
+        label: chriss.redirect::lang.redirect.type
         width: 16px
         type: redirect_system
         sortable: false
     from_url:
-        label: adrenth.redirect::lang.redirect.from_url
+        label: chriss.redirect::lang.redirect.from_url
         type: redirect_from_url
         searchable: true
     target_type:
-        label: adrenth.redirect::lang.redirect.target_type
+        label: chriss.redirect::lang.redirect.target_type
         type: redirect_target_type
     status_code:
-        label: adrenth.redirect::lang.redirect.status_code
+        label: chriss.redirect::lang.redirect.status_code
         type: redirect_status_code
     match_type:
-        label: adrenth.redirect::lang.redirect.match_type
+        label: chriss.redirect::lang.redirect.match_type
         type: redirect_match_type
     category:
-        label: adrenth.redirect::lang.redirect.category
+        label: chriss.redirect::lang.redirect.category
         relation: category
         select: name
         default: '-'
     hits:
-        label: adrenth.redirect::lang.redirect.hits
+        label: chriss.redirect::lang.redirect.hits
     sort_order:
-        label: adrenth.redirect::lang.redirect.priority
+        label: chriss.redirect::lang.redirect.priority
     is_enabled:
-        label: adrenth.redirect::lang.redirect.enabled
+        label: chriss.redirect::lang.redirect.enabled
         type: redirect_switch_color
