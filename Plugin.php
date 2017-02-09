@@ -27,11 +27,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'adrenth.redirect::lang.plugin.name',
-            'description' => 'adrenth.redirect::lang.plugin.description',
+            'name' => 'chriss.redirect::lang.plugin.name',
+            'description' => 'chriss.redirect::lang.plugin.description',
             'author' => 'Alwin Drenth',
             'icon' => 'icon-link',
-            'homepage' => 'https://github.com/adrenth/redirect',
+            'homepage' => 'https://github.com/Sieabah/redirect',
         ];
     }
 
@@ -122,9 +122,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'adrenth.redirect.access_redirects' => [
-                'label' => 'adrenth.redirect::lang.permission.access_redirects.label',
-                'tab' => 'adrenth.redirect::lang.permission.access_redirects.tab',
+            'chriss.redirect.access_redirects' => [
+                'label' => 'chriss.redirect::lang.permission.access_redirects.label',
+                'tab' => 'chriss.redirect::lang.permission.access_redirects.tab',
             ],
         ];
     }
@@ -136,68 +136,68 @@ class Plugin extends PluginBase
     {
         return [
             'redirect' => [
-                'label' => 'adrenth.redirect::lang.navigation.menu_label',
+                'label' => 'chriss.redirect::lang.navigation.menu_label',
                 'icon' => 'icon-link',
                 'url' => Backend::url('adrenth/redirect/statistics'),
                 'order' => 50,
                 'permissions' => [
-                    'adrenth.redirect.access_redirects',
+                    'chriss.redirect.access_redirects',
                 ],
                 'sideMenu' => [
                     'statistics' => [
                         'icon' => 'icon-bar-chart',
-                        'label' => 'adrenth.redirect::lang.title.statistics',
+                        'label' => 'chriss.redirect::lang.title.statistics',
                         'url' => Backend::url('adrenth/redirect/statistics'),
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'redirects' => [
                         'icon' => 'icon-link',
-                        'label' => 'adrenth.redirect::lang.navigation.menu_label',
+                        'label' => 'chriss.redirect::lang.navigation.menu_label',
                         'url' => Backend::url('adrenth/redirect/redirects'),
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'reorder' => [
-                        'label' => 'adrenth.redirect::lang.buttons.reorder_redirects',
+                        'label' => 'chriss.redirect::lang.buttons.reorder_redirects',
                         'url' => Backend::url('adrenth/redirect/redirects/reorder'),
                         'icon' => 'icon-sort-amount-asc',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'logs' => [
-                        'label' => 'adrenth.redirect::lang.buttons.logs',
+                        'label' => 'chriss.redirect::lang.buttons.logs',
                         'url' => Backend::url('adrenth/redirect/logs'),
                         'icon' => 'icon-file-text-o',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'categories' => [
-                        'label' => 'adrenth.redirect::lang.buttons.categories',
+                        'label' => 'chriss.redirect::lang.buttons.categories',
                         'url' => Backend::url('adrenth/redirect/categories'),
                         'icon' => 'icon-tag',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'import' => [
-                        'label' => 'adrenth.redirect::lang.buttons.import',
+                        'label' => 'chriss.redirect::lang.buttons.import',
                         'url' => Backend::url('adrenth/redirect/redirects/import'),
                         'icon' => 'icon-download',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                     'export' => [
-                        'label' => 'adrenth.redirect::lang.buttons.export',
+                        'label' => 'chriss.redirect::lang.buttons.export',
                         'url' => Backend::url('adrenth/redirect/redirects/export'),
                         'icon' => 'icon-upload',
                         'permissions' => [
-                            'adrenth.redirect.access_redirects',
+                            'chriss.redirect.access_redirects',
                         ],
                     ],
                 ],
@@ -223,9 +223,9 @@ class Plugin extends PluginBase
             'redirect_match_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TYPE_EXACT:
-                        return e(trans('adrenth.redirect::lang.redirect.exact'));
+                        return e(trans('chriss.redirect::lang.redirect.exact'));
                     case Redirect::TYPE_PLACEHOLDERS:
-                        return e(trans('adrenth.redirect::lang.redirect.placeholders'));
+                        return e(trans('chriss.redirect::lang.redirect.placeholders'));
                     default:
                         return $value;
                 }
@@ -233,15 +233,15 @@ class Plugin extends PluginBase
             'redirect_status_code' => function ($value) {
                 switch ($value) {
                     case 301:
-                        return e(trans('adrenth.redirect::lang.redirect.permanent'));
+                        return e(trans('chriss.redirect::lang.redirect.permanent'));
                     case 302:
-                        return e(trans('adrenth.redirect::lang.redirect.temporary'));
+                        return e(trans('chriss.redirect::lang.redirect.temporary'));
                     case 303:
-                        return e(trans('adrenth.redirect::lang.redirect.see_other'));
+                        return e(trans('chriss.redirect::lang.redirect.see_other'));
                     case 404:
-                        return e(trans('adrenth.redirect::lang.redirect.not_found'));
+                        return e(trans('chriss.redirect::lang.redirect.not_found'));
                     case 410:
-                        return e(trans('adrenth.redirect::lang.redirect.gone'));
+                        return e(trans('chriss.redirect::lang.redirect.gone'));
                     default:
                         return $value;
                 }
@@ -249,11 +249,11 @@ class Plugin extends PluginBase
             'redirect_target_type' => function ($value) {
                 switch ($value) {
                     case Redirect::TARGET_TYPE_PATH_URL:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_path_or_url'));
+                        return e(trans('chriss.redirect::lang.redirect.target_type_path_or_url'));
                     case Redirect::TARGET_TYPE_CMS_PAGE:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_cms_page'));
+                        return e(trans('chriss.redirect::lang.redirect.target_type_cms_page'));
                     case Redirect::TARGET_TYPE_STATIC_PAGE:
-                        return e(trans('adrenth.redirect::lang.redirect.target_type_static_page'));
+                        return e(trans('chriss.redirect::lang.redirect.target_type_static_page'));
                     default:
                         return $value;
                 }
@@ -272,7 +272,7 @@ class Plugin extends PluginBase
                 return sprintf(
                     '<span class="%s" title="%s"></span>',
                     $value ? 'oc-icon-magic' : 'oc-icon-user',
-                    e(trans('adrenth.redirect::lang.redirect.system_tip'))
+                    e(trans('chriss.redirect::lang.redirect.system_tip'))
                 );
             },
         ];

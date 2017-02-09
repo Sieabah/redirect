@@ -1,5 +1,5 @@
 {
-    "name": "adrenth/redirect",
+    "name": "chriss/redirect",
     "description": "A redirect plugin for October CMS",
     "type": "october-plugin",
     "license": "proprietary",
